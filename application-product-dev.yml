@@ -1,0 +1,19 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: ishopping-product-service
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ishopping_product
+    username: root
+    password: root
+mybatis-plus:
+  mapper-locations: classpath:cn/goldensoft/ishopping/mapper/*Mapper.xml  #扫描mapper的路径
+  type-aliases-package: cn.goldensoft.ishopping.domain,cn.goldensoft.ishopping.query #别名包
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    prefer-ip-address: true
